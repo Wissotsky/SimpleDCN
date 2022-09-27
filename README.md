@@ -9,6 +9,15 @@ This implementation has no security measures whatsoever. This is created for tea
 As this is a decentralized network its main distinction is that it does not have a central server(aka c2) to communicate with.
 This means is that to control the network you have to be a part of it. This is a very important distinction to make.
 
+## Protocol Spec
+
+| Command | Description | Arguments |
+| --- | --- | --- |
+| `PING` | Used to check if a node is alive | `None` |
+| `PONG` | Used to respond to a `PING` | `Size of PING Message` |
+| `HELLO` | Used to join a Node | `Node Uuid` |
+| `EVAL` | Forwards and executes JavaScript | `JavaScript code` |
+
 ## Files
 
 * `main.ts` - The example implementation of a network node
