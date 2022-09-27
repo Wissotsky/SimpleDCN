@@ -19,8 +19,8 @@ for await (const conn of server){
             server.send(EncodeMessage(Header.Pong, `Message Length: ${message[1].length}`), conn[1]);
             break;
         case Header.Hello:
-            console.log(`Hello Received from ${message[1]}. Nodes Known: ${routingMap.size}`);
             routingMap.set(message[1], conn[1]);
+            console.log(`Hello Received from ${message[1]}. Nodes Known: ${routingMap.size}`);
             break;
         case Header.Eval:
             const hash = crypto.subtle.digest("SHA-256", conn[0]).toString();

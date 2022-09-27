@@ -1,7 +1,7 @@
 # SimpleDCN
 
 This is a simple implementation of a Distributed Compute Network with the Deno Typescipt Runtime and no external dependencies.
-It utilizes gossip communication and a simple Datagram(UDP) protocol to communicate between nodes.
+It utilizes gossip communication and a simple Datagram(UDP) based protocol to communicate between nodes.
 
 ## Important notes
 
